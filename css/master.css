@@ -65,13 +65,13 @@ li {
 .headerSection {
   background: no-repeat url("../images/mobile/image-hero.jpg");
   background-size: 100%;
-  background-position: 0 20%;
+  background-position: 0 30%;
   padding-bottom: 55%;
 }
 
 .heading {
   width: 86%;
-  margin: 25% auto 0;
+  margin: 30% auto 0;
   border: solid white 2px;
 }
 

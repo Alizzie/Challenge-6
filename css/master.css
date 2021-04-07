@@ -26,8 +26,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.45rem;
-  padding: 7%;
+  font-size: 2.2rem;
+  padding: 7% 6% 6%;
 }
 
 h2 {
@@ -64,7 +64,7 @@ li {
 .headerSection {
   background: no-repeat url("../images/mobile/image-hero.jpg");
   background-size: 100%;
-  background-position: 0 0;
+  background-position: 0 150%;
   padding-bottom: 55%;
 }
 
@@ -79,7 +79,7 @@ li {
 .navbar {
   width: 100%;
   margin: auto;
-  padding-top: 8%;
+  padding-top: 6%;
   position: relative;
   z-index: 1;
 }
@@ -118,7 +118,7 @@ li {
   left: 0;
   top: 0;
   z-index: -1;
-  padding: 50% 0 50%;
+  padding: 46% 0 50%;
 }
 
 .hidden {

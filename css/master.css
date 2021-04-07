@@ -26,8 +26,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
-  padding: 7.6%;
+  font-size: 2.45rem;
+  padding: 7%;
 }
 
 h2 {
@@ -62,9 +62,10 @@ li {
 
 /* Header Styling  */
 .headerSection {
-  background: top/ cover no-repeat url("../images/mobile/image-hero.jpg");
-  background-size: 102%;
-  padding-bottom: 58%;
+  background: no-repeat url("../images/mobile/image-hero.jpg");
+  background-size: 100%;
+  background-position: 0 0;
+  padding-bottom: 55%;
 }
 
 .heading {
@@ -78,7 +79,7 @@ li {
 .navbar {
   width: 100%;
   margin: auto;
-  padding-top: 10%;
+  padding-top: 8%;
   position: relative;
   z-index: 1;
 }
@@ -109,7 +110,7 @@ li {
 }
 
 .mobileToggleBackground {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   position: absolute;
   width: 100%;
@@ -117,7 +118,7 @@ li {
   left: 0;
   top: 0;
   z-index: -1;
-  padding: 55% 0 50%;
+  padding: 50% 0 50%;
 }
 
 .hidden {

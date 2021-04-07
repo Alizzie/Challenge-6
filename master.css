@@ -1,0 +1,231 @@
+/* ### Primary
+
+- White: hsl(0, 0%, 100%)
+- Black: hsl(0, 0%, 0%)
+- Dark Gray: hsl(0, 0%, 55%)
+- Very Dark Gray: hsl(0, 0%, 41%)
+
+- Font size: 15px
+
+### Fonts
+font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  padding: 7% 6% 6%;
+}
+
+h2 {
+  color: black;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+p {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 55%);
+  font-size: 2.1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: white;
+  opacity: 0.9;
+  text-decoration: none;
+  line-height: 2;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Header Styling  */
+.headerSection {
+  background: no-repeat url("../images/mobile/image-hero.jpg");
+  background-size: 100%;
+  background-position: 0 150%;
+  padding-bottom: 55%;
+}
+
+.heading {
+  width: 86%;
+  margin: 40% auto 0;
+  border: solid white 2px;
+}
+
+
+/* Navbar Styling Mobile Design */
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding-top: 6%;
+  position: relative;
+  z-index: 1;
+}
+
+.navbarContent {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 0
+}
+
+.logo {
+  width: 100%;
+}
+
+.openCloseSymbol {
+  /* hamburger Icon */
+  background: center / contain no-repeat url("../images/icon-hamburger.svg");
+  width: 24px;
+  height: 45px;
+}
+
+.closeIcon {
+  background: center / contain no-repeat url("../images/icon-close.svg");
+  width: 20px;
+}
+
+.mobileToggleBackground {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  padding: 46% 0 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbarLinks {
+  width: 86%;
+  margin: auto;
+}
+
+/* First Section About Us Styling */
+
+.aboutUsSection {
+  margin: 25% auto;
+  width: 86%;
+  text-align: center;
+}
+
+.vrImage {
+  background: center/ contain no-repeat url("../images/mobile/image-interactive.jpg");
+  width: 100%;
+  height: 450px;
+}
+
+.aboutUs {
+  margin: 14% auto;
+}
+
+/* Second Section Creations Styling */
+
+.creationsSection {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 86%;
+  overflow: hidden;
+}
+
+.creationHeading {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.creation {
+  width: 100%;
+  height: 240px;
+}
+
+.allCreations {
+  width: 100%;
+  margin: 13% auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 240px;
+  grid-gap: 5%;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+figure::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+}
+
+figcaption {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 90%);
+  width: 36%;
+}
+
+.lol {
+  object-fit: cover;
+}
+
+/* .filterLol  {
+  height: 240px;
+  width: 100%;
+  position: relative;
+}
+
+.filterLol::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+}
+
+.imageLol {
+  background-image: url("../images/mobile/image-grid.jpg");
+  width: 100%;
+  height: 240px;
+} */

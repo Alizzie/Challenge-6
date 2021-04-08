@@ -43,6 +43,7 @@ p {
   color: hsl(0, 0%, 55%);
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: 2%
 }
 
 a {
@@ -60,6 +61,34 @@ ul {
 li {
   list-style-type: none;
 }
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+figure::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.05));
+}
+
+figcaption {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  margin: 0 0 7% 4%;
+}
+
 
 /* Header Styling  */
 .headerSection {
@@ -94,20 +123,24 @@ li {
   z-index: 0
 }
 
+.logoImage {
+  width: 50%;
+}
+
 .logo {
-  width: 100%;
+  width: 99%;
 }
 
 .openCloseSymbol {
   /* hamburger Icon */
   background: center / contain no-repeat url("../images/icon-hamburger.svg");
-  width: 24px;
-  height: 45px;
+  width: 22px;
+  height: 20px;
 }
 
 .closeIcon {
   background: center / contain no-repeat url("../images/icon-close.svg");
-  width: 20px;
+  width: 15px;
 }
 
 .mobileToggleBackground {
@@ -131,7 +164,7 @@ li {
   margin: auto;
 }
 
-/* First Section About Us Styling */
+/* First Section "About Us" Styling */
 
 .aboutUsSection {
   margin: 20% auto;
@@ -149,14 +182,15 @@ li {
   margin: 14% auto;
 }
 
-/* Second Section Creations Styling */
+/* Second Section "Creations" Styling */
 
 .creationsSection {
-  margin: auto;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
+  grid-gap: 3%;
   width: 86%;
-  overflow: hidden;
+  padding-bottom: 50%;
 }
 
 .creationHeading {
@@ -166,56 +200,52 @@ li {
 
 .creation {
   width: 100%;
-  height: 240px;
+  height: 120;
 }
 
 .allCreations {
   width: 100%;
-  margin: 13% auto;
+  height: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 240px;
-  grid-gap: 5%;
+  grid-gap: 1.5%;
+  padding-bottom: 40%;
 }
 
-figure {
-  position: relative;
+.creationImg {
   width: 100%;
   height: 100%;
-  margin: 0;
 }
 
+.gridCaption {
+  width: 20%;
+}
 
-figure::before {
-  content: "";
-  position: absolute;
-  top:0;
-  left: 0;
+.button {
+  justify-self: center;
+  width: 50%;
+}
+
+.btn {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+  border: black solid 1px;
+  background-color: white;
+  font-family: 'Alata', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 5% 0;
 }
 
-figcaption {
-  color: white;
-  position: absolute;
-  top: 0;
-  font-size: 2.8rem;
-  color: hsl(0, 0%, 90%);
-  width: 36%;
-}
-
-.lol {
-  object-fit: cover;
-}
-
-/* .filterLol  {
+/* Alternative Solution with divs */
+/* .filter (instead of figure{...}) {
   height: 240px;
   width: 100%;
   position: relative;
 }
 
-.filterLol::before {
+.filter::before {
   content: "";
   position: absolute;
   top:0;
@@ -225,8 +255,61 @@ figcaption {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
 }
 
-.imageLol {
+.image {
   background-image: url("../images/mobile/image-grid.jpg");
   width: 100%;
   height: 240px;
 } */
+
+/* Footer Section Styling */
+
+.footer {
+  background-color: black;
+  padding: 15% 0 7%
+}
+
+.footerContent {
+  display: grid;
+  justify-items: center;
+  width: 86%;
+  margin: 0 auto;
+}
+
+.links {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0 12%;
+}
+
+.links a {
+  line-height: 2.2;
+}
+
+.socialMediaLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 7%;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.85rem
+}
+
+/* Attribution Section Styling  */
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    background-color: black;
+    padding: 3% 0
+  }

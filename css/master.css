@@ -39,6 +39,24 @@ a {
   opacity: 0.9;
   text-decoration: none;
   line-height: 2;
+  position: relative;
+}
+
+a::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+a:hover::after {
+  opacity: 1;
+  width: 100%;
 }
 
 ul {
@@ -220,12 +238,13 @@ hr {
 .btn {
   width: 100%;
   border: black solid 1px;
-  background-color: white;
+  background: none;
   font-family: 'Alata', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   padding: 5% 0;
+  cursor: pointer;
 }
 
 /* Alternative Solution with divs */
@@ -250,6 +269,7 @@ hr {
   width: 100%;
   height: 240px;
 } */
+
 /* Footer And Attribution Sections  */
 .footerAndAttribution {
   background-color: black;
@@ -467,11 +487,11 @@ hr {
   }
 
   h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   figcaption {
@@ -504,7 +524,12 @@ hr {
   /* Section "About us" */
 
   .aboutUsSection {
-    margin: 27% auto 30%;
+    margin: 20% auto 30%;
+  }
+
+  .vrImageDiv {
+    width: 75%;
+    margin: 0 auto;
   }
 
   /* Section "Creations" */
@@ -531,7 +556,7 @@ hr {
   }
 
   .links a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .socialMediaLinks {
@@ -543,10 +568,334 @@ hr {
   }
 
   .copyright p{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .attribution {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Query min-width: 1025px */
+@media all and (min-width: 1025px) {
+
+  h1 {
+    font-size: 4.2rem;
+    padding: 6% 6% 4% 6%;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 4% 0 0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  a {
+    opacity: 1;
+    font-family: "Alata", sans-serif;
+
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-right: 25px;
+    position: relative;
+  }
+
+  figure {
+    position: relative;
+    transition: 0.8s;
+  }
+
+  figure::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.05));
+  }
+
+  figure:hover::before {
+    background: white;
+    opacity: 0.8;
+  }
+
+  figcaption {
+    font-size: 1.6rem;
+    margin: 0 0 12% 15%;
+    width: 70%;
+  }
+
+  hr {
+    width: 86%;
+  }
+
+  /* Header Section Styling */
+  .headerSection {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: 0 0;
+    padding-bottom: 12%;
+    position: relative;
+  }
+
+  .headerSection::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    width: 86%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .heading {
+    width: 60%;
+    margin: 11% 0 0;
+  }
+
+  /* Navbar Desktop Styling */
+
+  .navbar {
+    padding-top: 5%;
+  }
+
+  .logoImage {
+    width: 20%;
+  }
+
+  .openCloseSymbol, .closeIcon {
+    display: none
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .mobileToggleBackground {
+    padding: 0;
+    position: static;
+    background-color: transparent;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .navbarLinks {
+    width: 100%;
+  }
+
+  /* Section "About Us" Styling */
+
+  .aboutUsSection {
+    margin: 15% auto 18%;
+    position: relative;
+  }
+
+  .vrImageDiv {
+    margin: 0;
+    width: 67%;
+  }
+
+  .aboutUs {
+    width: 45%;
+    text-align: left;
+    margin: 0;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 7% 0 0 6%;
+  }
+
+  /* Section "Creations" Styling */
+
+  .creationsSection {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8%;
+    padding: 0 0 20% 0;
+    margin-bottom: 0;
+  }
+
+  .creationHeading {
+    margin: 0;
+    text-align: left;
+    grid-area: 1/1/2/2;
+    align-self: center;
+  }
+
+  .allCreations {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 4%;
+    padding-bottom: 0;
+    height: 70%;
+    grid-area: 2/1/3/3;
+  }
+
+  .creation:hover {
+    color: black;
+  }
+
+  .button {
+    grid-area: 1/2/2/3;
+    margin: 0;
+    justify-self: flex-end;
+    width: 35%;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 5% 0;
+    position: relative;
+    transition: 0.8s;
+  }
+
+  .btn:hover {
+    color: white;
+    background: black;
+  }
+
+  /* Footer And Attribution Section Styling */
+
+  .footer {
+    padding: 3% 0;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 12%;
+    align-items: center;
+  }
+
+  .footerLogo {
+    grid-area: 1/1/2/2;
+    margin: 0;
+    width: 45%;
+  }
+
+  .links {
+    grid-area: 2/1/3/2;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .links a {
+    font-size: 1rem;
+  }
+
+  .socialMediaLinks {
+    grid-area: 1/3/2/4;
+    justify-self: end;
+    margin: 0;
+    width: 60%;
+  }
+
+  .socialeMedia {
+    width: 100%;
+  }
+
+  .copyright {
+    grid-area: 2/3/3/4;
+    justify-self: end;
+    margin: 0;
+  }
+
+  .copyright p {
+    font-size: 0.9rem;
+  }
+
+  .attribution {
+    font-size: 0.8rem;
+    padding: 2% 0;
+  }
+
+  .attribution a {
+    font-family: "Josefin sans", sans-serif;
+    position: static;
+  }
+}
+
+/* Media Query min-width: 1440px */
+
+@media all and (min-width: 1200px) {
+
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  figcaption {
+    font-size: 1.8rem;
+  }
+
+  /* Header Section Styling */
+
+  .heading {
+    margin: 12% 0 0;
+  }
+
+  .header {
+    width: 75%;
+  }
+
+  /* Navbar Styling */
+  .navbar {
+    padding-top: 4%;
+  }
+
+  .navbarContent {
+    width: 75%;
+  }
+
+  /* Section "About Us" Styling */
+
+  .aboutUsSection {
+    margin: 10% auto 15%;
+    width: 75%;
+  }
+
+  .vrImageDiv {
+    width: 65%;
+  }
+
+  .aboutUs {
+    width: 40%;
+    padding: 10% 0 0 10%;
+  }
+
+  /* Section "Creations" Styling */
+
+  .creationsSection {
+    width: 75%;
+    margin-bottom: 0;
+  }
+
+  .button {
+    width: 30%;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 6% 0;
+  }
+
+  /* Footer and Attribution Section Styling */
+
+  .footerContent {
+    width: 75%;
   }
 }
